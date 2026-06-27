@@ -1,0 +1,2 @@
+MONTHS_IN_YEAR: int = 12
+PERCENTAGE: int = 100
