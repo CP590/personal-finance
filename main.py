@@ -9,6 +9,6 @@ with open('scenario.json') as f:
     data = json.load(f)
 
 scenario = ScenarioFactory.create(data)
-print(scenario.net_monthly_cash_flow())
+print(scenario.net_monthly_cash_flow()) #outdated, assumed all incomes and expenses are monthly
 print(lookup[scenario.schedules[0].source_id])
-SimulationEngine.run(scenario, date(2026, 3, 1), 3)
+SimulationEngine.run(scenario, date(2026, 3, 1), 8)

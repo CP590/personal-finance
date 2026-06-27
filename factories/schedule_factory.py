@@ -4,6 +4,7 @@ from domain.schedule.recurring_schedule import RecurringSchedule
 from domain.schedule.oneoff_schedule import OneOffSchedule
 from domain.schedule.schedule_type import ScheduleType
 from domain.cashflow.oneoff_expense import OneOffExpense
+from domain.common.frequency import Frequency
 
 @dataclass
 class ScheduleFactory:
@@ -19,6 +20,7 @@ class ScheduleFactory:
                 )
                 return RecurringSchedule(
                     source_id=data['source_id'],
+                    frequency=Frequency(data['frequency']),
                     start_date=start_date,
                     end_date=end_date
                 )

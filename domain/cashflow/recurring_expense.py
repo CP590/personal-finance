@@ -12,5 +12,5 @@ class RecurringExpense(RecurringCashFlow):
         return -self.amount_value * self.frequency.annual_factor()
 
     def monthly_amount(self) -> float:
-        return -self.annual_amount() / MONTHS_IN_YEAR
+        return self.annual_amount() / MONTHS_IN_YEAR
     
